@@ -4,7 +4,7 @@
 **This project was aimed to get acquainted with various features of the Spring Framework.**\
 **Below is the list of features used -**
 
-
+&nbsp
 
 1. Spring MVC
 2. Spring Security (For Authentication)
