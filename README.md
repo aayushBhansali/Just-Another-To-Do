@@ -10,6 +10,6 @@ Below is the list of features used -
 4. Spring Boot (For Auto-configuration)
 5. HTML/CSS for UI
 
-![Home page] (docs/screenshot1.PNG)
+![Home page] (https://github.com/aayushBhansali/Just-Another-To-Do/blob/master/docs/screenshot1.jpg?raw=true)
 
 ![Main page] (docs/screenshot2.PNG)
