@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+
+.bg-image {
+	width: 60vw;
+	height: 82vh;
+	background-image: url("../images/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -100px 0px;
+}
+
+.text-wrapper {
+	width: 30vw;
+	margin-right: 8em;
+	align-self: center;
+	font-family: 'Poppins', sans-serif;
+}
