@@ -10,6 +10,6 @@ Below is the list of features used -
 4. Spring Boot (For Auto-configuration)
 5. HTML/CSS for UI
 
-![Home page] (./src/main/resources/static/images/screenshot1.png?raw=True)
+![Home page] (src/main/resources/static/images/screenshot1.png?raw=True)
 
-![Main page] (./src/main/resources/static/images/screenshot2.png)
+![Main page] (src/main/resources/static/images/screenshot2.png)
