@@ -21,7 +21,7 @@
 		</div>
 		
 		<nav class="navbar">
-			<a href="/signup" class="nav-btn">Logout</a>
+			<a href="/logout" class="nav-btn">Logout</a>
 		</nav>
 	</header>
 	

@@ -1,5 +1,7 @@
 package com.project.todo.controllers;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -49,5 +51,12 @@ public class MainController {
 		}
 		
 		return "redirect:login";
+	}
+	
+	@RequestMapping(path = "/logout", method = RequestMethod.GET)
+	public String logout(HttpSession session) {
+		session.removeAttribute("id");
+		session.invalidate();
+		return "landing";
 	}
 }

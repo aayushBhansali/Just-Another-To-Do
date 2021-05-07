@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "sf"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,15 +29,24 @@
 		<div class="login-background"></div>
 		<div class="form-wrapper">
 			<div class="login-header"> Login </div>
+			<% String error = request.getParameter("error"); 
+				if(error == null)
+					error = "";
+			%>
 			
-			<div style="font-size: 1em; color: red; margin-bottom: 0.5em;">${error}</div>
 			
-			<form class="form" action="todo/show">
-				<label path="username"> Username : </label>
-				<input class="input" type="text" path="username" />
+			<% if (error.equals("true")) { %>
+				<div style="font-size: 1em; color: red; margin-bottom: 0.5em;"> Invalid Credentials </div>
+			<% } %>
+			
+			
+			<form class="form" action="login" method="POST">
+				<input type="hidden" style="display: none;" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+				<label for="username"> Username : </label>
+				<input class="input" type="text" name="username" />
 				
-				<label path="password"> Password : </label>
-				<input class="input" type="password" path="password"/>
+				<label for="password"> Password : </label>
+				<input class="input" type="password" name="password"/>
 				
 				<input type="submit" class="btn login-btn" value="Login" />
 			</form>
