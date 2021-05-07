@@ -1,8 +1,9 @@
 # Just-Another-To-Do
-**A simple To-Do web app made using Spring**\
+**A simple To-Do web app made using Spring**
 
 **This project was aimed to get acquainted with various features of the Spring Framework.**\
-**Below is the list of features used -**\
+**Below is the list of features used -**
+
 
 
 1. Spring MVC
@@ -10,8 +11,8 @@
 3. Data Access using Java Persistence API (JPA)
 4. Spring Boot (For Auto-configuration)
 5. HTML/CSS for UI
-\
-\
+
+
 
 
 ![Home page](https://github.com/aayushBhansali/Just-Another-To-Do/blob/main/docs/screenshot1.PNG?raw=True)
