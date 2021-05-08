@@ -18,8 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
-	DataSource dataSource;
-	
+	DataSource dataSource;	
 
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {

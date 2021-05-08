@@ -22,7 +22,6 @@ public class MainController {
 	
 	@RequestMapping(path = "/", method = RequestMethod.GET)
 	public String landing() {
-		System.out.println("Request received");
 		return "landing";
 	}
 	
