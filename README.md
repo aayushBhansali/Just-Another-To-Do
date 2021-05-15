@@ -10,7 +10,8 @@
 2. Spring Security (For Authentication)
 3. Data Access using Java Persistence API (JPA)
 4. Spring Boot (For Auto-configuration)
-5. HTML/CSS for UI
+5. JUnit - Unit Testing
+6. HTML/CSS for UI
 
 <br>
 <br>
