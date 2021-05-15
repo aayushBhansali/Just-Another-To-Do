@@ -33,7 +33,7 @@
 			<div class="text-subtitle">
 				Noting down tasks makes you more likely to complete them
 			</div>
-			<button class="btn"> Get Started </button>
+			<a class="btn" style="text-decoration: none; margin-top: 2em;" href="/signup"> Get Started </a>
 		</div>
 		
 	</section>

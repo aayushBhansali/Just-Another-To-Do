@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Tasks {
+public class Task {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,7 @@ public class Tasks {
 	
 	private long userid;
 	
-	private String task;
+	private String title;
 	
 	private Date date;
 	
@@ -40,11 +40,11 @@ public class Tasks {
 	}
 
 	public String getTask() {
-		return task;
+		return title;
 	}
 
-	public void setTask(String task) {
-		this.task = task;
+	public void setTask(String title) {
+		this.title = title;
 	}
 
 	public Date getDate() {

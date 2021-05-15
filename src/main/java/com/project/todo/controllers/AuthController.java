@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -15,29 +17,28 @@ import com.project.todo.models.User;
 import com.project.todo.services.UserService;
 
 @Controller
-public class MainController {
+public class AuthController {
 	
 	@Autowired
 	UserService userService;
 	
-	@RequestMapping(path = "/", method = RequestMethod.GET)
+	@GetMapping(path = "/")
 	public String landing() {
 		return "landing";
 	}
 	
-	
-	@RequestMapping(path = "/login", method = RequestMethod.GET)
+	@GetMapping(path = "/login")
 	public String showLoginPage() {
 		return "login";
 	}
 	
-	@RequestMapping(path = "/signup", method = RequestMethod.GET)
+	@GetMapping(path = "/signup")
 	public String showSignupPage(@ModelAttribute User user) {
 		user = new User();
 		return "signup";
 	}
 	
-	@RequestMapping(path = "/signup", method = RequestMethod.POST)
+	@PostMapping(path = "/signup")
 	public String signupSuccess(User user, Model model) {
 		try {
 			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -52,7 +53,7 @@ public class MainController {
 		return "redirect:login";
 	}
 	
-	@RequestMapping(path = "/logout", method = RequestMethod.GET)
+	@GetMapping(path = "/logout")
 	public String logout(HttpSession session) {
 		session.removeAttribute("id");
 		session.invalidate();
